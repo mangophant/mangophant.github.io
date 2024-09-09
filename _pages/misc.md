@@ -9,7 +9,7 @@ nav_order: 4
 
 #### BibFetcher
 
-- I write a tool to retrieve and format bibliography from [DBLP](https://dblp.org/) automatically. Check it [here](https://github.com/czyxm/BibFetcher)!
+- I write a tool to retrieve and format bibliography from [DBLP](https://dblp.org/) automatically. Check it [here](https://github.com/mangophant/BibFetcher)!
 
 #### Table Tennis
 
