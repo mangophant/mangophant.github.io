@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="nav-name" id="site-title">Loading...</div>
+            <nav>
+                <ul id="nav-menu">
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div id="tab-home" class="tab-content active">
+                
+                <div class="bio-section">
+                    <div class="bio-text">
+                        <div id="bio-content"></div>
+                        <div class="bio-links" id="bio-links">
+                        </div>
+                    </div>
+                    <img id="profile-img" src="" alt="Profile Photo" class="bio-image" onerror="this.style.display='none'">
+                </div>
+
+                <section>
+                    <h2>Selected Publications</h2>
+                    <div id="pub-loading" class="status-text">Loading publications from BibTeX...</div>
+                    <ul class="pub-list" id="publication-list">
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Academic Services</h2>
+                    <ul class="simple-list" id="service-list">
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Honors & Awards</h2>
+                    <ul class="simple-list" id="award-list">
+                    </ul>
+                </section>
+            </div>
+
+            <!-- <div id="tab-other" class="tab-content">Other tab</div> -->
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

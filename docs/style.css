@@ -1,0 +1,248 @@
+:root {
+    --primary-color: #101010;
+    --accent-color: rgb(0,63,136);
+    --text-color: #2a2a2a;
+    --highlight-color: rgb(176,31,36);
+    --bg-color: #ffffff;
+    --border-color: #eaeaea;
+    --font-main: 'SimHei';
+    --font-serif: 'SimHei', serif;
+    --content-width: 860px;
+    scrollbar-gutter: stable;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bio-text p, .pub-item, .simple-list {
+    font-size: 1.1rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 0rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-name {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bio-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.bio-text {
+    flex: 1;
+}
+
+.bio-links {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    border: 0px;
+}
+
+.link-item svg {
+    width: 16px;
+    height: 16px;
+}
+
+.bio-image {
+    width: 150px;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+ul.simple-list {
+    padding-left: 1.2rem;
+    list-style-type: square;
+}
+
+ul.simple-list li {
+    margin-bottom: 0.3rem;
+}
+
+ul.simple-list li .award-note {
+    font-size: 1rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.pub-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pub-item {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.pub-row {
+    margin-bottom: 0.2rem;
+}
+
+.pub-row.title {
+    font-size: 1.05rem;
+    color: var(--accent-color);
+    opacity: 0.8;
+}
+
+.pub-row.authors {
+    color: var(--text-color);
+}
+
+.highlight-self {
+    text-decoration: underline;
+}
+
+.highlight-corr {
+    font-weight: bold;
+    vertical-align: super;
+    font-size: 0.75em;
+    margin-left: 1px;
+    line-height: 0;
+}
+
+.pub-row.venue {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.pub-links {
+    margin-left: 0.5rem;
+    font-weight: normal;
+    font-style: normal;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+.pub-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 2px;
+}
+
+.pub-links a:hover {
+    text-decoration: underline;
+}
+
+.pub-row.award {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--highlight-color);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+}
+
+.pub-row.award svg {
+    width: 16px;
+    height: 16px;
+}
+
+.pub-row.award a {
+    color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
+    .bio-section {
+        flex-direction: column-reverse;
+        text-align: left;
+        gap: 2rem;
+    }
+    .bio-image {
+        width: 100%;
+        max-width: 300px;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
