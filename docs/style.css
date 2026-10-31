@@ -5,8 +5,8 @@
     --highlight-color: rgb(176,31,36);
     --bg-color: #ffffff;
     --border-color: #eaeaea;
-    --font-main: 'SimHei';
-    --font-serif: 'SimHei', serif;
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    --font-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
     --content-width: 860px;
     scrollbar-gutter: stable;
 }
@@ -108,15 +108,15 @@ nav a.active {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 .bio-links {
     margin-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: center;
-    gap: 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
 }
 
 .link-item {
@@ -244,7 +244,7 @@ ul.simple-list li .award-note {
 
 @media (max-width: 768px) {
     .bio-section {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: left;
         gap: 2rem;
     }
