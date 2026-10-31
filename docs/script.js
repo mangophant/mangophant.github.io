@@ -3,7 +3,7 @@ const CONFIG =
     "name": "Meng Chen",
     "titleName": "Meng Chen",
     "highlightAuthorName": "Meng Chen",
-    "bio": "<p>I'm a final-year Ph.D. candidate in Cyberspace Security in the <a href=\"http://www.en.cs.zju.edu.cn\">College of Computer Science and Technology</a> at Zhejiang University, advised by <a href=\"https://lynnlilu.github.io\">Li Lu</a>. I also earned my bachelor's degree from Zhejiang University in 2021. I has visited <a href=\"https://www.ntu.edu.sg/computing/research/institutes-centres/csl\">Cyber Security Lab</a> at Nanyang Technological University, advised by <a href=\"https://personal.ntu.edu.sg/tianwei.zhang\">Tianwei Zhang</a>. I also work with <a href=\"https://zjhzjh123.github.io\">Jiaheng Zhang</a> at National University of Singapore. My research focuses on AI system security, including adversarial robustness, backdoor learning, especially their threats to intelligent audio systems and multimodal large language models.</p>",
+    "bio": "<p>I am currently a researcher at <a href=\"https://www.bytedance.com\">ByteDance</a>, working on the security of large language models and AI agents. I received my Ph.D. degree in Cyberspace Security from the <a href=\"http://www.en.cs.zju.edu.cn\">College of Computer Science and Technology</a> at Zhejiang University in 2026, advised by <a href=\"https://lynnlilu.github.io\">Li Lu</a>. I also earned my bachelor's degree from Zhejiang University in 2021. During my Ph.D., I visited the <a href=\"https://www.ntu.edu.sg/computing/research/institutes-centres/csl\">Cyber Security Lab</a> at Nanyang Technological University, advised by <a href=\"https://personal.ntu.edu.sg/tianwei.zhang\">Tianwei Zhang</a>, and collaborated with <a href=\"https://zjhzjh123.github.io\">Jiaheng Zhang</a> at National University of Singapore. My research focuses on AI system security, including adversarial robustness and backdoor learning, especially their threats to intelligent audio systems and multimodal large language models.</p>",
     "profileImg": "assets/img/profile.jpg",
     "bibtexPath": "assets/pub.bib",
     "email": "meng.chen@zju.edu.cn",
@@ -13,7 +13,7 @@ const CONFIG =
     "services": [
         {
             "category": "Journal Reviewer",
-            "items": "IEEE TIFS, IEEE TNSE"
+            "items": "IEEE TIFS, IEEE TNSE, IEEE TVCG"
         },
         {
             "category": "External Reviewer",
@@ -21,7 +21,7 @@ const CONFIG =
         },
         {
             "category": "Artifact Evaluation Committee",
-            "items": "USENIX Security (2026)"
+            "items": "USENIX Security (2026), ACM CCS (2026)"
         }
     ],
     "awards": [
@@ -126,7 +126,7 @@ function renderBasicInfo() {
         { key: 'email', icon: 'mail', label: 'Email', url: `mailto:${CONFIG.email}` },
         { key: 'github', icon: 'github', label: 'GitHub', url: CONFIG.github },
         { key: 'scholar', icon: 'graduation-cap', label: 'Scholar', url: CONFIG.scholar },
-        { key: 'orcid', icon: 'id-card', label: 'ORCID', url: `https://orcid.org/${CONFIG.orcid}` }
+        { key: 'orcid', icon: 'id-card', label: 'ORCID', url: CONFIG.orcid.startsWith('http') ? CONFIG.orcid : `https://orcid.org/${CONFIG.orcid}` }
     ];
 
     iconLinks.forEach(item => {
